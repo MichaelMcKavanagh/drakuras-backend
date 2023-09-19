@@ -1,0 +1,152 @@
+gameplay:
+ - solo world
+ - team play? (later)
+ - is there an end/victory condition
+ - fog of war, imperfect map knowledge with the need to expore as you go...  maybe monsters auto-respawn... as character scouting skill increases, larger parts of the map are explored when ending movement... can attack and explore at the same time. - maybe game tracks how long it's been since a province was scouted
+ - at the moment, the character party will just stick together, there may be options for other advanced movement and stuff later
+ - at the moment, there might be 'towns' but not player controlled ones... that might be where there are markets or quests available
+
+modules
+ - can have multiple maps (planes) within the one module that can be accessed by various means
+ - module designer may get a slice of the profits from anyone playing that module (in theory) so that they are encouraged to advertise it and improve it
+
+characters:
+ - name
+ - race?  (maybe some races have affinities with some skills giving a boost to how fast that skill progresses?)
+ - gender?  
+ - combat experience
+ - mana
+ - current combat agressiveness
+ - current combat stance 
+ - current combat spell settings (maybe multiple spell options can be prioritised to give various options in combat)
+ - current combat tactical settings (not sure yet, but maybe an archer can hang back and shoot using archery and movement, while another character may go berserk)
+ - current combat other? settings (which may prioritise use of certain skills??)
+ - wounds (how should characters recover from death?  - maybe their divinity will restore them to health after X turns)
+ - effects
+ - movement speed
+
+character skills (all skills an enchance over time, it might cost 1xp for level 1, and 2xp more to get to level 2, etc).  
+Some skill points would be awarded automatically through usage, and characters might earn some generic points that can be manually assigned).  
+Probably a character has all of these skills at rank 0, and can gain xp in them.  Or maybe they need to be trained somewhere before they start increasing.
+Not sure if the game designer would be able to choose the skill list - would be nice if possible though... if so, I'd have to figure out more about
+what the skills benefit, and figure out a way for the designer to link the skill name to the effect, and to the mechanism of it increasing.  
+How deep is this rabbit hole anyway?
+These are just ideas of what skills could be:
+ - comradary (gives small boost to all others in the combat)
+ - swordsman
+ - rage
+ - axeman
+ - archer
+ - swiftfooted
+ - resilient
+ - tough
+ - fire affinity
+ - wind affinity
+ - water affinity
+ - earth affinity
+ - strong fire resistance
+ - strong wind resistance
+ - strong water resistance
+ - strong earth resistance
+ - summoning
+ - scouting
+ - alchemy? - creating potions
+ - healer? (or enhanced natural healing?)
+ 
+
+character traits (not all positive)  (how would these be acquired or lost... more for flavour that much else?)
+ - temper
+ - cowardly
+ - etc
+ - brave
+ - lucky
+ - perceptive
+ - thoughtful
+ - careful
+ - cunning
+ - greedy
+ - reckless
+
+combat stances 
+ - maybe some kind of varying combat styles that the player might benefit from if switched around for different situations
+ - perhaps the stance could work like a wow warrior, or adom tactics stance (incr defence at the cost of attack, etc)
+ - some stances might adjust which way the xp is awarded between skills
+
+combat agressiveness (per character) - meaning some characters could retreat from combat before others, even if they aren't very wounded
+ - very cautious
+ - somewhat cautious
+ - standard
+ - agressive
+ - very agressive
+
+elemental magic (certain fire/wind/water/earth values are required to unlock spells.  eg: earthquake spell might need earth 10, fire 5 and wind 2)
+ - fire
+ - wind
+ - water
+ - earth
+
+magic resistances
+ - fire
+ - wind
+ - water 
+ - earth
+
+auras (think status - rank up over time)
+ - boost any of the above 
+
+items (items need some indictor of 'power level' to help the loot table system)
+ - skill scrolls - add a few xp points to various skills
+ - equipment (see equipment slots)  (need restrictions, but mostly based on skills)
+ - teleport scrolls
+ - summon scrolls
+ - provide character effects
+ - alchemical herbs
+ - potions - might give immediate benefits or apply effects over time
+ - portal stones - (used at portal sites to dimensionally switch to another map within the same module)
+
+equipment: note each equipment would also have a 'power level' (think copper, bronze, iron, mithril, platinum, obsidian)
+ - weapon
+ - head
+ - body
+ - boots
+ - gloves
+ - belt
+ - left ring
+ - right ring
+ - necklace
+ - mount
+
+monsters: each monster is basically a 'character' with a special monster race, so they can have skills etc.  monsters can also have 'power levels' (eg, copper dragon, bronze dragon, etc)
+ - most monster encounters would involve multiple monsters
+ - there could be multiple possible combats per hex
+ - on monster defeat, think about how xp is awarded per character within combat (used skills gain some xp, also some generic manually spendable xp)
+ - monsters could apply effects (usually negative)
+ - monsters could have their own combat stances, etc.
+
+loot tables:
+ - d&d style loot table, in which defeating say a 'bronze dragon' would generally give you 'bronze' type equipment, however, you could get a bit lucky, or a bit unlucky.
+ - currently not planning on having item weights or the need for loot transporting, etc, so probably best if not much loot is awarded per victory
+
+effects - positive or negative, that last over multiple turns
+ - weaken
+ - strengthen
+ - enlightened - minor bonus xp
+ - skill boosts
+ - poisoning
+ - bleeding
+ - demoralised
+
+quests (need quest progress tracking, quest reward system - skill boosts? rare/powerful items? gain effects? - how would quests be aquired and handed in? (maybe it is not location specific, but you can only be on one quest at a time, and can just get immediate reward upon completion)
+ - killing related: eg: slay X of monster type Y (of at least power level mithril or above) or defeat particular foe
+ - item related: collect X extra of item Y  (of at least power level mithril or above)
+ - skill related: gain X xp to skill Y
+ - travel: travel X tiles  
+ - bring me portal stone for dimensional travel? (to another map)
+
+---------------------------------------------------
+
+combat:
+ - how does it work in detail, including skills/items/spells....  ????
+ - very important to have this interesting, and for the players to have multiple valid strategies and synergies
+ - will just be a text combat report, but needs to be more detailed, and better quality than legends
+ 

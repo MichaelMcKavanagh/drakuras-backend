@@ -1,0 +1,99 @@
+Write a sql script that generates a table which is named users and contains columns of id, firstName, lastName, balance (which should be a currency), login, passwordHash, email, emailVerified (which is a boolean).
+
+Then write a sql script that generates a table which is named modules and contains columns id, userId(which links to the users table id column), name, description (which is optional).
+
+Then write a sql script that generates a table which is named terrainTypes and contains columns id, name, imageName, movementCost (which is an integer).
+
+Then write a sql script that generates a table which is named maps and contains columns id, moduleId(which links to the modules table, id column), x (which is an integer), y (which is an integer), terrainTypeId (which links to the terrainTypes table, id column).
+
+Then write a sql script that generates a table which is named forces and contains columns id, moduleId (which links to the modules table, id column), forceType (which is an enum of party, legion, lair, ruin, city), x (which is an integer), y (which is an integer).
+
+Then write a sql script that generates a table which is named items and contains columns id, moduleId (which links to the modules table, id column), name, combatPowerBoost (which is an integer)
+
+Then write a sql script that generates a table which is named characters and contains columns id, moduleId (which links to the modules table, id column), name, combatPower (which is an integer), headItemId (which links to the items table id), bodyItemId (which links to the items table id), bless (which is an integer), forceId (which links to the force table id)
+
+-- Create the users table
+CREATE TABLE users (
+  id INTEGER PRIMARY KEY,
+  firstName TEXT NOT NULL,
+  lastName TEXT NOT NULL,
+  balance REAL NOT NULL,
+  login TEXT NOT NULL,
+  passwordHash TEXT NOT NULL,
+  email TEXT NOT NULL,
+  emailVerified BOOLEAN NOT NULL
+);
+
+-- Create the modules table
+CREATE TABLE modules (
+  id INTEGER PRIMARY KEY,
+  userId INTEGER NOT NULL,
+  name TEXT NOT NULL,
+  description TEXT NULL,
+  FOREIGN KEY (userId) REFERENCES users(id)
+);
+
+-- Create the terrainTypes table
+CREATE TABLE terrainTypes (
+  id INTEGER PRIMARY KEY,
+  name TEXT NOT NULL,
+  imageName TEXT NOT NULL,
+  movementCost INTEGER NOT NULL
+);
+
+-- Create the maps table
+CREATE TABLE maps (
+  id INTEGER PRIMARY KEY,
+  moduleId INTEGER NOT NULL,
+  x INTEGER NOT NULL,
+  y INTEGER NOT NULL,
+  terrainTypeId INTEGER NOT NULL,
+  FOREIGN KEY (moduleId) REFERENCES modules(id),
+  FOREIGN KEY (terrainTypeId) REFERENCES terrainTypes(id)
+);
+
+-- Create the forces table
+CREATE TABLE forces (
+  id INTEGER PRIMARY KEY,
+  moduleId INTEGER NOT NULL,
+  forceType TEXT NOT NULL,
+  x INTEGER NOT NULL,
+  y INTEGER NOT NULL,
+  FOREIGN KEY (moduleId) REFERENCES modules(id)
+);
+
+-- Create the forces table
+CREATE TABLE forces (
+  id INTEGER PRIMARY KEY,
+  moduleId INTEGER NOT NULL,
+  forceType TEXT NOT NULL,
+  x INTEGER NOT NULL,
+  y INTEGER NOT NULL,
+  FOREIGN KEY (moduleId) REFERENCES modules(id)
+);
+
+-- Create the items table
+CREATE TABLE items (
+  id INTEGER PRIMARY KEY,
+  moduleId INTEGER NOT NULL,
+  name TEXT NOT NULL,
+  combatPowerBoost INTEGER NOT NULL,
+  FOREIGN KEY (moduleId) REFERENCES modules(id)
+);
+
+-- Create the characters table
+CREATE TABLE characters (
+  id INTEGER PRIMARY KEY,
+  moduleId INTEGER NOT NULL,
+  name TEXT NOT NULL,
+  combatPower INTEGER NOT NULL,
+  headItemId INTEGER NOT NULL,
+  bodyItemId INTEGER NOT NULL,
+  bless INTEGER NOT NULL,
+  forceId INTEGER NOT NULL,
+  FOREIGN KEY (moduleId) REFERENCES modules(id),
+  FOREIGN KEY (headItemId) REFERENCES items(id),
+  FOREIGN KEY (bodyItemId) REFERENCES items(id),
+  FOREIGN KEY (forceId) REFERENCES forces(id)
+);
+

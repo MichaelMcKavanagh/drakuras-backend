@@ -1,0 +1,21 @@
+{
+  "name": "drakuras-backend",
+  "version": "1.0.0",
+  "description": "Drakuras",
+  "main": "index.js",
+  "scripts": {
+    "db-generate": "node ./db/db-generate.js",
+    "db-populate": "node ./db/db-populate.js",
+    "test": "mocha"
+  },
+  "author": "Michael McKavanagh",
+  "license": "ISC",
+  "devDependencies": {
+    "sqlite3": "^5.1.4"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "moment": "^2.29.4"
+  }
+}
